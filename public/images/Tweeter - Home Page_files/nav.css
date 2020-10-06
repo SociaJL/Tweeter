@@ -1,0 +1,26 @@
+/* Be 120 pixels in height
+Be the full width of the viewport.
+Have #4056A1 as its default background colour.
+Have #FFFFF as its default font colour
+The <span> within the <nav> has Bungee as it's default font-family
+The inner content should not be touching the viewport edge on any side and should remain 1.5ems away from all edges */
+
+nav {
+  display: flex;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px; 
+  justify-content: space-between;
+  align-items: center;
+}
+/* Tweeter logo */
+ #logo {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  padding-left: 1.5em;
+ }
+
+ #write-tweet {
+   padding-right: 1.5em;
+
+ }

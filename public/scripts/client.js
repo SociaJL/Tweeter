@@ -22,7 +22,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -30,18 +31,62 @@ const data = [
   }
 ]
 
-const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+const createTweetElement = function (tweet) {
+  let $tweet = $(`<article class="tweet">
+<div class="avatar-box">
+<span><img class="profile-pic" src="${tweet.user.avatars}">
+ <h6 class="user">${tweet.user.name}</h6>
+</span>
+  <h6 class="handle">${tweet.user.handle}</h6>
+</div>
+
+<div class="text">${tweet.content.text}</div>
+
+<section class="under-border">
+  ${new Date(tweet.created_at)}    //// date.now()-tweet.created_at = time in sec convert to days 
+
+  <div class="icons">
+  </div>
+</section>
+
+<div class="tweet-button">
+  <i class="tweet-button-icon"></i>
+</div>
+</article>`);
+  return $tweet;
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = $(`<article class="tweet">Hello world</article>`);
-// ...
-return $tweet;
-}
+$(document).ready(function () {
+  console.log("loaded")
+  renderTweets(data);
+  $(".newtweet_form").submit(function (event) {
+    event.preventDefault()
+    let formData = $(".newtweet_form").serialize()
+    console.log(formData);
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: formData,
+    }).then(function (res) {
+       console.log("post response", res)
+    });
+  });
+});
 
-$(document).ready(function() {
-renderTweets(data);
+const renderTweets = function (tweets) {
+  for (let tweet of tweets) {
+    $(".tweets").prepend(createTweetElement(tweet))
+  }
 };
+
+
+
+
+$(document).ready(function () {
+  .post
+  
+});
+
+// $(document).ready(function () {
+//   $.post("/tweets").serialize()
+// });

@@ -40,7 +40,7 @@ const createTweetElement = function (tweet) {
 <div class="text">${escape(tweet.content.text)}</div>
 
 <section class="under-border">
-  ${escape(new Date(tweet.created_at))}    //// date.now()-tweet.created_at = time in sec convert to days 
+  ${escape(dayCalc(new Date(tweet.created_at)))}  
 
   <div class="icons">
   </div>
@@ -108,3 +108,16 @@ const hideError = function () {
   }, 3000)
 }
 
+
+const dayCalc = (date) => {
+  const postTime = Math.floor(Math.abs(new Date(date) - Date.now()) / (1000 * 3600 * 24)); 
+  let postDay;
+  if (postTime > 1) {
+    postDay = `${postTime} Days Ago`;
+  } else if (postTime === 1) {
+    postDay = `${postTime} Day Ago`;
+  } else {
+    postDay = "Today";
+  }
+  return postDay;
+};

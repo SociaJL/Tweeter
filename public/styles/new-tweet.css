@@ -45,12 +45,6 @@
   color: red;
 }
 
-
-.tweet-button {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
 .submit-button {
   font-family: 'bungee', sans-serif;
   background-color: #4056A1;

@@ -13,6 +13,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
     rel="stylesheet">
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" 
+    rel="stylesheet">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -40,17 +43,23 @@
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
+
+
+
+
+
+<!-- Navigation Bar -->
 <body>
-  <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
     <span id="write-tweet"><strong>Write</strong> a new tweet</span>
   </nav>
-  <!-- Page-specific (main) content here -->
 
+
+  <!-- Page-specific (main) content here -->
   <header>
     <div>
-      <img src="/images/profile-hex.png">
+      <img id="user-prifile-pic" src="/images/profile-hex.png">
     </div>
     <br>
     <div>
@@ -58,27 +67,24 @@
     </div>
   </header>
 
-
-  <!-- create tags??? -->
-
   <main class="container">
     <section class="new-tweet">
+
       <h3 class="hidden" id="error">error</h3>
+
       <form class="newtweet_form">
         <textarea name="text" class="formtext_area" placeholder="What are you humming about?"></textarea>
+
         <div class="form_footer">
           <button type="submit" class="submit-button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    
+
     <section class="tweets">
-  
     </section>
-    </main>
-    
-    
-    </body>
-    
-    </html>
+  </main>
+</body>
+
+</html>

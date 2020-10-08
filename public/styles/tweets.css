@@ -6,8 +6,9 @@
 
 .tweet {
   display: block;
+  font-size: .7em;
   flex-direction: column;
-  font-family: 'bungee', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 20px;
@@ -32,28 +33,43 @@
 }
 
 .profile-pic {
+  padding: .7em;
   float: left;
 }
 
 .user {
   float: right;
+  font-size: 1em;
 }
 
 .text {
   outline: none; 
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: .3em solid #212529;
   width: 100%;
   overflow: hidden;
   resize: none;
-  padding: 5px; 
-  line-height: 1.5em;
-  height: 1.5em;
+  padding-bottom: 1em; 
+  padding-left: 2em;
+  line-height: auto;
+  height: auto;
   justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+
 
 }
 
 .handle {
+  font-size: 1em;
+  padding-right: 1em;
   opacity: 0;
+  color: rgba (197,203,227,1);
 }
 
+.under-border {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  height: .7em;
+  font-weight: 700;
+}

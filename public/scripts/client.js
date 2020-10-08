@@ -79,7 +79,6 @@ $(document).ready(function () {
         url: "/tweets",
         data: formData,
       }).then(function (res) {
-        console.log("post response", res)
         loadTweets()
       });
     };
@@ -98,7 +97,8 @@ const loadTweets = function () {
     url: "/tweets",
   })
   .then(function(tweets){
-    renderTweets(tweets);
+    renderTweets(tweets)
+    $(".newtweet_form")[0].reset();
   })
 };
 

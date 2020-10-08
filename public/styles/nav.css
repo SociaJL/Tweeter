@@ -1,20 +1,21 @@
 
 nav {
   display: flex;
-  background-color: #4056A1;
+  background-color: #1c1914;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #ffffff;
   height: 3em;   
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: auto;
-  width: 100%;
+  width: 100vw;
 
 }
 /* Tweeter logo */
  #logo {
   font-family: 'Bungee', cursive;
-  font-size: 40px;
+  font-size: 1em;
   padding-left: 1.5em;
  }
 
@@ -22,3 +23,16 @@ nav {
    padding-right: 1.5em;
 
  }
+
+ @media only screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    background-color: #4056A1;
+    background-image: none;
+    color: #ffffff;
+    height: 3em;   
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;  
+  }
+}

@@ -19,3 +19,18 @@ header {
 .user-name {
   color: whitesmoke;
 }
+
+@media only screen and (min-width: 1024px) {
+  
+  header {
+    float: left;
+    position: relative;
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 8%;
+    height: auto;
+    background-color: #1c1914;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+  
+}

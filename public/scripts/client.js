@@ -1,10 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// const error = $("#error")
 
-// Fake data taken from initial-tweets.json
+
+
 const data = [
   {
     "user": {
@@ -34,16 +31,16 @@ const data = [
 const createTweetElement = function (tweet) {
   let $tweet = $(`<article class="tweet">
 <div class="avatar-box">
-<span><img class="profile-pic" src="${tweet.user.avatars}">
- <h6 class="user">${tweet.user.name}</h6>
+<span><img class="profile-pic" src="${escape(tweet.user.avatars)}">
+ <h6 class="user">${escape(tweet.user.name)}</h6>
 </span>
-  <h6 class="handle">${tweet.user.handle}</h6>
+  <h6 class="handle">${escape(tweet.user.handle)}</h6>
 </div>
 
-<div class="text">${tweet.content.text}</div>
+<div class="text">${escape(tweet.content.text)}</div>
 
 <section class="under-border">
-  ${new Date(tweet.created_at)}    //// date.now()-tweet.created_at = time in sec convert to days 
+  ${escape(new Date(tweet.created_at))}    //// date.now()-tweet.created_at = time in sec convert to days 
 
   <div class="icons">
   </div>
@@ -56,15 +53,23 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(function () {
   console.log("loaded")
   loadTweets()
   $(".newtweet_form").submit(function (event) {
     event.preventDefault()
     if (!$(".formtext_area").val()){
-      alert("post is empty")
+      $("#error").html("No text present").show(1000, hideError)
+
     } else if ($(".formtext_area").val().length > 140) {
-      alert("tweet too long")
+      $("#error").html("Character length over 140").show(1000, hideError)
+      
     } else {
 
       let formData = $(".newtweet_form").serialize()
@@ -75,6 +80,7 @@ $(document).ready(function () {
         data: formData,
       }).then(function (res) {
         console.log("post response", res)
+        loadTweets()
       });
     };
   });
@@ -95,4 +101,10 @@ const loadTweets = function () {
     renderTweets(tweets);
   })
 };
+
+const hideError = function () {
+  setTimeout(function () {
+    $("#error").hide();
+  }, 3000)
+}
 

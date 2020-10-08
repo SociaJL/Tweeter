@@ -1,14 +1,11 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -17,9 +14,9 @@ html {
 
 body {
 
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  color: #46443f;
+  background-color: whitesmoke;
+  font-size: 2em;
   font-family: 'Source Sans Pro', sans-serif;
  
 }
@@ -27,11 +24,12 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
   margin-left: 5%;
   margin-right: 5%;
+  padding: 2em;
 }
 /*
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
 /* font-family: 'Bungee', cursive; */
+

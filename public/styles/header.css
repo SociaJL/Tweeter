@@ -1,9 +1,21 @@
-body > header {
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5b000;
+  background-color: #1c1914;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  padding-top: 5em; 
+  padding-bottom: 1em;
+}
 
+.user-profile-pic {
+  max-width: 1em;
+  max-height: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name {
+  color: whitesmoke;
 }

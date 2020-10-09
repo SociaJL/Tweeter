@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+# Screen Shots 
+
+Desktop Layout.
+![Large View Screen Shot](/public/images/for-readme/ScreenShotLarge.png)
+
+Mobile Layout. 
+![Mobile View Screen Shot](/public/images/for-readme/ScreenShotSmall.png)

@@ -32,39 +32,26 @@
   <!-- Tweets CSS -->
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
-
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 
-  <!-- Char-Count -->
+  <!-- Count JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
-
-
-
+<body>
 <!-- Navigation Bar -->
-<!-- <body>
-  <nav>
+    <nav>
     <span id="logo">tweeter</span>
-    <div id="write-tweet"><strong>Write</strong> a new tweet
-      <img id="arrow-button" src="/images/down-arrow-solid-24.png">
-    </div>
-  </nav> -->
-  
-  <nav>
-    <span id="logo">tweeter</span>
-    <div id="write-tweet" class="navClicked">
+    <div id="write-tweet">
       <span><strong>Write</strong> a new tweet</span>
       <img id="arrow-button" src="/images/down-arrow-solid-24.png">
     </div>
   </nav>
-  
-
-  <!-- Page-specific (main) content here -->
+  <!--Main Page Content-->
   <header>
     <div>
       <img id="user-profile-pic" src="/images/profile-hex.png">
@@ -74,7 +61,7 @@
       <h2 class="user-name"><strong>Din</strong> Djarin</h2>
     </div>
   </header>
-
+<!-- New Tweet Container -->
   <main class="container">
     <section class="new-tweet">
 
@@ -89,7 +76,7 @@
         </div>
       </form>
     </section>
-
+<!-- New tweet feed built dynamically -->
     <section class="tweets">
     </section>
   </main>

@@ -1,4 +1,4 @@
-
+/* Main Layout Styling */
 html {
   box-sizing: border-box;
 }
@@ -8,16 +8,11 @@ html {
   padding: 0;
 }
 
-
-
 body {
-  /* display: flex;
-  flex-direction: row; */
   color: #46443f;
   background-color: whitesmoke;
   font-size: 2em;
   font-family: 'Source Sans Pro', sans-serif;
- 
 }
 
 main {
@@ -25,7 +20,7 @@ main {
   margin-right: 5%;
 }
 
-
+/* For larger viewing */
 @media only screen and (min-width: 1024px) {
   main {
   width: 50vw;

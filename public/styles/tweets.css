@@ -1,4 +1,4 @@
-
+/* Tweet feed containers */
 .tweet {
   display: block;
   font-size: .7em;
@@ -11,34 +11,17 @@
   width: 100%;
   margin-top: 10px;
 }
-
+/* Shadow for tweet boxes */
 .tweet:hover {
 -webkit-box-shadow: 8px 8px 0px 0px rgba(197,203,227,1);
 box-shadow: rgba(197,203,227,1); ;
 }
-
+/* User handle to show when tweet box is in focus */
 .tweet:hover .handle {
   opacity: 0.75;
   fill: rgba(197,203,227,1);
 }
-
-.avatar-box {
-  display: flex;
-  justify-content: flex-start;
-  justify-content: space-between;
-}
-.user {
-  padding-top: 1em;
-  font-size: 1em;
-  float: left;
-}
-
-
-.profile-pic {
-  float: left;
-  padding-right: .5em;
-}
-
+/* users handle hidden */
 .handle {
   font-size: 1em;
   padding: 1em;
@@ -46,6 +29,19 @@ box-shadow: rgba(197,203,227,1); ;
   fill: rgba(197,203,227,1);
 }
 
+
+/* user avatar in tweet box */
+.profile-pic {
+  float: left;
+  padding-right: .5em;
+}
+/* user name beside avatar */
+.user {
+  padding-top: 1em;
+  font-size: 1em;
+  float: left;
+}
+/* main tweet feed text */
 .text {
   outline: none; 
   border: none;
@@ -60,23 +56,22 @@ box-shadow: rgba(197,203,227,1); ;
   height: auto;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
-
-
 }
 
+
+/* Date posted located under the line */
 .under-border {
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 1em;
+  padding-left: .5em;
   height: .7em;
   font-weight: 700;
-  
 }
-
+/* icons located under the line */
 .icons {
  float: right;
+ padding-right: .5em;
 }
-
 .icon {
   max-width: 1em;
   max-height: 1em;

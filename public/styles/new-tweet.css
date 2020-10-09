@@ -1,21 +1,14 @@
-
+/* container for new tweets */
 .new-tweet{
-  padding: .8em;
+  padding: 2em;
   padding-bottom: 1em;
   border: none;
 }
-.newtweet_form {
-  width: 100%;
-  color: #020202;
-  text-align: center;
-  margin: 0;
-  border: 0;
-}
-
+/* Where user can type a new tweet */
 .formtext_area {
   width: 100%;
   height: 2.4em; 
-  font-size: 1em;
+  font-size: .8em;
   font-weight: 700;
   display: block;
   border: none;
@@ -26,30 +19,32 @@
   resize: none;
 }
 
+
+/* Under the text line */
 .form_footer {
   display: flex;
   justify-content: space-between;
   padding-top: .5em;
-
 }
-
-.counter {
-  display: flex; 
-  text-align: center;
-}
-
-.red-counter {
-  color: red;
-}
-
+/* Tweet button */
 .submit-button {
   font-family: 'bungee', sans-serif;
   background-color: #4056A1;
   color: #ffffff ;
   padding: .2em;
 }
-
+/* Character count on right */
+.counter {
+  display: flex; 
+  text-align: center;
+}
+/* Character count color change when over limit */
+.red-counter {
+  color: red;
+}
+/* Error Message */
 .hidden {
   display: none;
+  color: red
 }
 

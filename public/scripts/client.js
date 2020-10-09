@@ -40,12 +40,14 @@ const createTweetElement = function (tweet) {
 <div class="text">${escape(tweet.content.text)}</div>
 
 <section class="under-border">
-  ${escape(dayCalc(new Date(tweet.created_at)))}  
-
-  <div class="icons">
-  </div>
-</section>
-
+<div class="icons">
+    <img class="icon" src="/images/flag-alt-solid-24.png">
+    <img class="icon" src="/images/repost-regular-24.png">
+    <img class="icon" src="/images/heart-solid-24.png">
+</div>
+  ${escape(dayCalc(new Date(tweet.created_at)))} 
+  </section>
+  
 <div class="tweet-button">
   <i class="tweet-button-icon"></i>
 </div>

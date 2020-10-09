@@ -70,5 +70,14 @@ box-shadow: rgba(197,203,227,1); ;
   padding-left: 1em;
   height: .7em;
   font-weight: 700;
+  
 }
 
+.icons {
+ float: right;
+}
+
+.icon {
+  max-width: 1em;
+  max-height: 1em;
+}
